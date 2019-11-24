@@ -54,12 +54,12 @@ wire [7:0] AluOR=A|indata;
 wire [7:0] AluXOR=A^indata;
 wire [8:0] AluOut=(`AluOP==3'b000)?AluAdd:
                   (`AluOP==3'b001)?AluSub:
-						(`AluOP==3'b010)?AluAdc:
-						(`AluOP==3'b011)?{AluRASA[0],AluRASA[8:1]}:
-						(`AluOP==3'b100)?AluLCSA:
-						(`AluOP==3'b101)?{1'h0,AluAND}:
-						(`AluOP==3'b110)?{1'h0,AluOR}:
-						                 {1'h0,AluXOR};
+                  (`AluOP==3'b010)?AluAdc:
+                  (`AluOP==3'b011)?{AluRASA[0],AluRASA[8:1]}:
+                  (`AluOP==3'b100)?AluLCSA:
+                  (`AluOP==3'b101)?{1'h0,AluAND}:
+                  (`AluOP==3'b110)?{1'h0,AluOR}:
+                                  {1'h0,AluXOR};
 
 always @(negedge clk) begin
 	IREnable<=PC[0];
