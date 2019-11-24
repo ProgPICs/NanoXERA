@@ -3,7 +3,7 @@
 // Antonio Sánchez
 //
 // OPCODES															FLA  A2A  MWR  ALO  PLO  ALU
-// LD		Load Address A on A	A->Address  InData->A    0    1    0    0    0   xxx
+// LD    Load Address A on A	A->Address  InData->A    0    1    0    0    0   xxx
 // LDI   Load Inmediate on A                           0    0    0    0    0   xxx
 // GOTO  Inmediate to PC                               0    0    0    0    1   xxx
 // STI   Store A on inmediate Address                  0    1    1    0    0   xxx
