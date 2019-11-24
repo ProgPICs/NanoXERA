@@ -62,7 +62,6 @@ wire [8:0] AluOut=(`AluOP==3'b000)?AluAdd:
 						                 {1'h0,AluXOR};
 
 always @(negedge clk) begin
-	//IREnable<=~IREnable;
 	IREnable<=PC[0];
 	PC<=(`PCLoad)?indata:PCInc;
 	IR<=(IREnable)?indata:IR;
