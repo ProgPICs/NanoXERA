@@ -1,0 +1,23 @@
+//////////////////////////////////////////////////////////////////////////////////
+// NanoXERA CPU
+// Antonio Sánchez
+//
+// OPCODES	                                          FLA  A2A  MWR  ALO  PLO  ALU
+// LD    Load Address A on A	A->Address  InData->A  0    1    0    0    0   xxx
+// LDI   Load Inmediate on A                           0    0    0    0    0   xxx
+// GOTO  Inmediate to PC                               0    0    0    0    1   xxx
+// STI   Store A on inmediate Address                  0    1    1    0    0   xxx
+// GOTOZ Inmediate to PC if A=0                        1    1    0    0    1   xxx
+// GOTOC Inmediate to PC if Carry bit                  1    0    0    0    1   xxx
+// ADDI  A+Inmediate to A                              0    0    0    1    0   000
+// SUBI  A-inmediate to A                              0    0    0    1    0   001
+// ADCI  A+inmediate+Carry to A                        0    0    0    1    0   010
+// RASA  Arithmetic Right Shift A                      0    0    0    1    0   011
+// LCSA  Carry Left Shift A                            0    0    0    1    0   100
+// ANDI  A-inmediate to A                              0    0    0    1    0   101
+// ORI   A-inmediate to A                              0    0    0    1    0   110
+// XORI  A-inmediate to A                              0    0    0    1    0   111
+//////////////////////////////////////////////////////////////////////////////////
+
+00 55 // LDI   Load Inmediate on A                     0    0    0    0    0   xxx
+08 00 // GOTO  Inmediate to PC                         0    0    0    0    1   xxx
