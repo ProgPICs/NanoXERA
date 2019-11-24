@@ -2,7 +2,7 @@
 // NanoXERA CPU
 // Antonio Sánchez
 //
-// OPCODES															FLA  A2A  MWR  ALO  PLO  ALU
+// OPCODES                                            FLA  A2A  MWR  ALO  PLO  ALU
 // LD    Load Address A on A	A->Address  InData->A    0    1    0    0    0   xxx
 // LDI   Load Inmediate on A                           0    0    0    0    0   xxx
 // GOTO  Inmediate to PC                               0    0    0    0    1   xxx
@@ -40,8 +40,8 @@ reg        Carry=1'h0;
 
 assign address=(`MemWrite)?indata:
                (`Flags)?(`A2Add)?(A==8'h0)?indata:PC:
-					(Carry)?indata:PC:
-					(`A2Add)?A:PC;
+               (Carry)?indata:PC:
+               (`A2Add)?A:PC;
 assign we=`MemWrite;
 wire [7:0] PCInc=PC+8'h1;
 wire [8:0] AluAdd=A+indata;
