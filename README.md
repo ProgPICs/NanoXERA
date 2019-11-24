@@ -21,3 +21,5 @@ Slice Logic Utilization:
  Number of Slice LUTs:                   **83**  out of   5720     1%  
 
 ![](/RTL.png)
+
+![](/RTL2.png)
